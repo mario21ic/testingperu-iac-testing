@@ -15,7 +15,12 @@ output "selected_subnet_ids" {
 
 output "alb_dns_name" {
   description = "The DNS name of the ALB"
-  value       = module.alb.dns_name
+  value       = aws_lb.my_alb.dns_name
+}
+
+output "ec2_instance_id" {
+  description = "The ID of the EC2 instance"
+  value       = module.ec2_instance.id
 }
 
 output "ec2_private_ip" {
@@ -23,9 +28,10 @@ output "ec2_private_ip" {
   value       = module.ec2_instance.private_ip
 }
 
-output "ec2_instance_id" {
-  description = "The ID of the EC2 instance"
-  value       = module.ec2_instance.id
+output "ec2_public_ip" {
+  description = "The public IP address of the EC2 instance"
+  value       = module.ec2_instance.public_ip
 }
+
 
 

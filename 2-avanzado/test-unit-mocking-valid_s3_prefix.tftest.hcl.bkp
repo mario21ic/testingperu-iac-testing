@@ -1,0 +1,13 @@
+# mock_provider "aws" {}
+
+# run "valid_s3_prefix" {
+#   variables {
+#     bucket_prefix = "test123"
+#   }
+#   # command = plan
+
+#   assert {
+#     condition     = aws_s3_bucket.bucket_demo.bucket == "test123-mybucket"
+#     error_message = "S3 bucket name did not match expected"
+#   }
+# }

@@ -7,3 +7,8 @@ variable "instance_type" {
   type    = string
   default = "t2.micro"
 }
+
+variable "bucket_prefix" {
+  type    = string
+#   default = "test"
+}
