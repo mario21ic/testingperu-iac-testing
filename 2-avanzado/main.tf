@@ -60,6 +60,7 @@ resource "aws_lb" "my_alb" {
   tags = {
     Environment = "Development"
     Project     = "Example"
+    #Tool        = "Terraform"
   }
 }
 
