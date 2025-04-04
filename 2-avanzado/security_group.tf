@@ -5,7 +5,8 @@ resource "aws_security_group" "lb_sg" {
   vpc_id      = data.aws_vpc.default.id
 
   tags = {
-    Name = "lb_sg"
+    # Name        = "lb_sg"
+    Tool        = "Terraform" # fix Policy as Code
   }
 }
 resource "aws_vpc_security_group_ingress_rule" "allow_lb_ipv4" {

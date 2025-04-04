@@ -20,8 +20,9 @@ module "ec2_instance" {
   }
 
   tags = {
-    Terraform   = "true"
-    Environment = "dev"
+    Project     = "Example"
+    Environment = "Development"
+    Tool        = "Terraform" # fix Policy as Code
   }
 }
 
@@ -58,9 +59,9 @@ resource "aws_lb" "my_alb" {
   idle_timeout               = 60
 
   tags = {
-    Environment = "Development"
     Project     = "Example"
-    #Tool        = "Terraform"
+    Environment = "Development"
+    Tool        = "Terraform" # fix Policy as Code
   }
 }
 
